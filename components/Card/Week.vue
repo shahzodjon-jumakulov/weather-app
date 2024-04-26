@@ -138,7 +138,7 @@ const getIcon = (code) => {
     grid-template-columns: repeat(4, 1fr);
 
     .day:nth-child(8) {
-      display: block;
+      display: flex;
     }
   }
 }
