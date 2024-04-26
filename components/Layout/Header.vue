@@ -11,7 +11,6 @@ const toggleColorMode = () => {
 const city = ref("Ташкент");
 
 const onSubmit = () => {
-  console.log("Hello");
   emit("toggle", city.value);
 };
 </script>

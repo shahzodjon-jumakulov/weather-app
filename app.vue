@@ -6,13 +6,10 @@ const current = ref(data.value.current);
 const location = ref(data.value.location);
 const forecast = ref(data.value.forecast);
 
-console.log(data.value);
-
 const onChange = async (q) => {
   const { data: newData } = await useFetch("/api/weather/forecast.json", {
     params: { q, days: 8, lang: "ru" },
   });
-  console.log(newData.value);
   if (newData.value) {
     current.value = newData.value.current;
     location.value = newData.value.location;
